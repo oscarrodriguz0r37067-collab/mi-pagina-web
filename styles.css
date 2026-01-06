@@ -1,0 +1,412 @@
+/* ==========================
+   RESET
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ==========================
+   ANIMACIÓN DE FONDOS MULTICOLOR (9 COLORES)
+========================== */
+@keyframes gradientMove {
+    0%   { background-position: 0% 50%; }
+    5%   { background-position: 5% 50%; }
+    10%  { background-position: 10% 50%; }
+    15%  { background-position: 15% 50%; }
+    20%  { background-position: 20% 50%; }
+    25%  { background-position: 25% 50%; }
+    30%  { background-position: 30% 50%; }
+    35%  { background-position: 35% 50%; }
+    40%  { background-position: 40% 50%; }
+    45%  { background-position: 45% 50%; }
+    50%  { background-position: 50% 50%; }
+    55%  { background-position: 55% 50%; }
+    60%  { background-position: 60% 50%; }
+    65%  { background-position: 65% 50%; }
+    70%  { background-position: 70% 50%; }
+    75%  { background-position: 75% 50%; }
+    80%  { background-position: 80% 50%; }
+    85%  { background-position: 85% 50%; }
+    90%  { background-position: 90% 50%; }
+    95%  { background-position: 95% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==========================
+   HEADER
+========================== */
+.header {
+    background: linear-gradient(270deg, #a8bfc9, #AFEEEE, #dbe6eb, #DCDCDC, #b0c6d8, #c1d4df, #808080, #f4f9fc, #b6c9d3,#AFEEEE, #FFEBCD);
+    background-size: 900% 900%;
+    animation: gradientMove 30s ease infinite;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-left .logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f1f5f9;
+}
+
+.header-left h1 {
+    font-size: 1.5rem;
+    color: #1e293b;
+}
+
+.header nav a {
+    color: #0f172a;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.header nav a:hover {
+    color: #38bdf8;
+}
+
+/* ==========================
+   HAMBURGUESA
+========================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #1e293b;
+    border-radius: 3px;
+}
+
+/* ==========================
+   HERO
+========================== */
+.hero {
+    height: 38vh;
+    background: linear-gradient(135deg, #808080, #dae7ef, #e8f2f7, #b0c6d8, #d1e4ed, #f4f9fc, #c7dfe8, #dbe6eb, #eaf5fb, #5F9EA0, #87CEEB, #F0FFFF, #FFF8DC, #FAF0E6, #DEB887);
+    background-size: 900% 900%;
+    animation: gradientMove 30s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2, .hero p {
+    border-right: 3px solid #213b1e;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 8s steps(40) infinite;
+}
+
+.hero h2 {
+    font-size: 2.1rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #405533;
+}
+
+@keyframes typing {
+    0%, 10% { width: 0; }
+    40%, 60% { width: 100%; }
+    100% { width: 0; }
+}
+
+/* ==========================
+   SERVICIOS
+========================== */
+.services {
+    padding: 60px 20px;
+    background: linear-gradient(270deg, #a8bfc9, #AFEEEE, #dbe6eb, #DCDCDC, #b0c6d8, #c1d4df, #808080, #f4f9fc, #b6c9d3, #AFEEEE, #FFEBCD);
+    background-size: 900% 900%;
+    animation: gradientMove 35s ease infinite;
+    text-align: center;
+    margin-top: 0;
+}
+
+.services h2 {
+    font-size: 2.2rem;
+    color: #1e293b;
+    margin-bottom: 40px;
+}
+
+.carousel-wrapper {
+    margin-bottom: 60px;
+}
+
+.carousel-wrapper h3 {
+    color: #334155;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================
+   CARRUSEL
+========================== */
+.carousel {
+    width: 70%;
+    max-width: 950px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s ease-in-out; /* aquí se puede cambiar a 7s/8s si controlas con JS */
+}
+
+/* CARD */
+.carousel .card {
+    flex: 0 0 100%;
+    background: #b0c6d8;
+    color: #1e293b;
+    border-radius: 18px;
+    padding: 10px;  /* reduce el padding para imagen más grande */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMAGEN */
+.carousel .card img {
+    width: 100%;       /* ocupa todo el ancho de la card */
+    height: 95%;      /* ocupa toda la altura disponible de la card */
+    object-fit: contain; /* mantiene proporción sin recortar */
+    background: #dae7ef;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* TEXTO DE LA CARD */
+.carousel .card p {
+    color: #1e293b;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.carousel .card h3 {
+    color: #1e293b;
+    font-size: 1.3rem;
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* BOTONES CARRUSEL */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(59, 130, 246, 0.7);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    background: #3b82f6;
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+/* ==========================
+   CONTACTO
+========================== */
+.contact {
+    background: #1e293b;
+    padding: 35px 40px;
+    color: #f1f5f9;
+}
+
+.contact a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* ==========================
+   REDES SOCIALES
+========================== */
+.socials {
+    display: flex;
+    gap: 30px;
+}
+
+.icon {
+    width: 38px;
+    height: 38px;
+    transition: transform 0.3s;
+}
+
+.socials a:hover .icon {
+    transform: scale(1.25);
+}
+
+.facebook svg { color: #1877F2; }
+.instagram svg { color: #E4405F; }
+.whatsapp svg { color: #25D366; }
+
+/* ==========================
+   WHATSAPP FLOTANTE
+========================== */
+.whatsapp-float-wrapper {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.whatsapp-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    background: #f1f5f9;
+    padding: 6px 14px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.whatsapp-float {
+    width: 70px;
+    height: 70px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.15);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.45);
+}
+
+.whatsapp-float svg {
+    width: 35px;
+    height: 35px;
+    fill: currentColor;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+    background: #2c3e50;
+    color: #f1f5f9;
+    text-align: center;
+    padding: 18px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+    .hamburger { 
+        display: flex; 
+    }
+
+    .header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(245, 245, 245, 0.95);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        z-index: 1001;
+    }
+
+    .header nav a {
+        color: #1e293b;
+        font-weight: 600;
+        font-size: 1.05rem;
+        text-decoration: none;
+    }
+
+    .header nav a:hover {
+        color: #38bdf8;
+    }
+
+    .header nav.show {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Carrusel en móvil */
+    .carousel {
+        width: 95%;
+        height: 450px;
+    }
+
+    .carousel .card {
+        padding: 5px;  /* menos padding para imagen más grande */
+    }
+
+    .carousel .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
